@@ -5,7 +5,7 @@ package variables;
  */
 public class Developer {
 
-	// Generación de atributos
+	/** Atributos privados*/
 	private final static int numOfEmployees = 4;
 	private int employeId;
 	private static int daysOfVacations = 21;
@@ -14,7 +14,7 @@ public class Developer {
 	private static int allEmployees = 127;
 	private int freeDays;
 
-	// Generación del constructor
+	/** Generación del constructor*/
 	public Developer(int employeId, String nameOfEmployee) {
 		this.employeId = employeId;
 		this.nameOfEmployee = nameOfEmployee;
