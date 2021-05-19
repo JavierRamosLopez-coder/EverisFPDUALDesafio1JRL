@@ -14,8 +14,14 @@ import java.util.Scanner;
  */
 public class FpDual {
 
+	// Declaración de un objeto de la clase Scanner, declarado como estático
 	static Scanner S = new Scanner(System.in);
 
+	/**
+	 * Método main
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		// Llamada al método estático
@@ -27,6 +33,7 @@ public class FpDual {
 	 * Método que va a realizar todas las operaciones del proyecto
 	 */
 	private static void variablesChallenge() {
+
 		// Creación de variables locales (Ámbito método)
 		int d1j, d4j, d2j, days;
 
@@ -69,7 +76,8 @@ public class FpDual {
 					+ d4.getEmployeId());
 
 			// Se procede a realizar las operaciones sobre las vacaciones de cada empleado
-			// Introducción del método getDaysOfVacations en una variable debido a la comodidad
+			// Introducción del método getDaysOfVacations en una variable debido a la
+			// comodidad
 			// para operar sobre las variables y no sobre los métodos
 			d2j = d2.getDaysOfVacations() - 2;
 			System.out.println("\t");
@@ -104,16 +112,24 @@ public class FpDual {
 					" Introduzca su nombre de programador para consultar sus días disfrutables (Alonso, Fran, Javi o Inma)");
 			names = S.next();
 
+			// Primera comparación
 			if (names.equals("Alonso")) {
 				d1.setFreeDays(10);
 				System.out.println("Bienvenido, usted tiene " + d1.getFreeDays() + " días disfrutables");
+				
+				// Interacción con el usuario
 				System.out.println(" ¿ Desea disminuir días disfrutables ? (S/N)");
 				option = S.next();
+				
+				// Evaluación de la opción introducido por el usuario
 				if (option.equals("S")) {
 
+					// Interacción con el usuario
 					System.out.println(
 							"Introduzca el número de días a eliminar, asegúrese de que no elimine más días de los que tiene");
 					days = S.nextInt();
+					
+					// Evaluación de otra condición dependiendo de los días
 					if (days > d1.getFreeDays()) {
 
 						System.out.println("ERROR");
@@ -125,21 +141,31 @@ public class FpDual {
 								+ d1.getFreeDays() + " días disfrutables");
 
 					}
-
+					
+				// Evaluación de la otra opción introducida por el usuario
 				} else if (option.equals("N")) {
 					System.out.println("De acuerdo, que pase buen día. Recuerda que dispone de " + d1.getFreeDays()
 							+ " días disfrutables");
 				}
+				
+			// Segunda condición
 			} else if (names.equals("Inma")) {
 				d2.setFreeDays(90);
 				System.out.println("Bienvenido, usted tiene " + d2.getFreeDays() + " días disfrutables");
+				
+				// Interacción con el usuario
 				System.out.println(" ¿ Desea disminuir días disfrutables ? ");
 				option = S.next();
+				
+				// Evaluación de la opción introducido por el usuario
 				if (option.equals("S")) {
-
+					
+					// Interacción con el usuario
 					System.out.println(
 							"Introduzca el número de días a eliminar, asegúrese de que no elimine más días de los que tiene");
 					days = S.nextInt();
+					
+					// Evaluación de otra condición dependiendo de los días
 					if (days > d2.getFreeDays()) {
 
 						System.out.println("ERROR");
@@ -151,21 +177,31 @@ public class FpDual {
 								+ d2.getFreeDays() + " días disfrutables");
 
 					}
-
+					
+				// Evaluación de la otra opción introducida por el usuario
 				} else if (option.equals("N")) {
 					System.out.println("De acuerdo, que pase buen día. Recuerda que dispone de " + d2.getFreeDays()
 							+ " días disfrutables");
 				}
+				
+			// Tercera condición
 			} else if (names.equals("Fran")) {
 				d3.setFreeDays(5);
 				System.out.println("Bienvenido, usted tiene " + d3.getFreeDays() + " días disfrutables");
+				
+				// Interacción con el usuario
 				System.out.println(" ¿ Desea disminuir días disfrutables ? ");
 				option = S.next();
+				
+				// Evaluación de la opción introducido por el usuario
 				if (option.equals("S")) {
 
+					// Interacción con el usuario
 					System.out.println(
 							"Introduzca el número de días a eliminar, asegúrese de que no elimine más días de los que tiene");
 					days = S.nextInt();
+					
+					// Evaluación de la opción introducido por el usuario
 					if (days > d3.getFreeDays()) {
 
 						System.out.println("ERROR");
@@ -178,20 +214,30 @@ public class FpDual {
 
 					}
 
+				// Evaluación de la otra opción introducida por el usuario
 				} else if (option.equals("N")) {
 					System.out.println("De acuerdo, que pase buen día. Recuerda que dispone de " + d3.getFreeDays()
 							+ " días disfrutables");
 				}
+		
+			// Cuarta condición
 			} else if (names.equals("Javi")) {
 				d4.setFreeDays(65);
 				System.out.println("Bienvenido, usted tiene " + d4.getFreeDays() + " días disfrutables");
+				
+				// Interacción con el usuario
 				System.out.println(" ¿ Desea disminuir días disfrutables ? ");
 				option = S.next();
+				
+				// Evaluación de la opción introducido por el usuario
 				if (option.equals("S")) {
 
+					// Interacción con el usuario
 					System.out.println(
 							"Introduzca el número de días a eliminar, asegúrese de que no elimine más días de los que tiene");
 					days = S.nextInt();
+					
+					// Evaluación de los días a eliminar por el usuario
 					if (days > d4.getFreeDays()) {
 
 						System.out.println("ERROR");
@@ -204,16 +250,19 @@ public class FpDual {
 
 					}
 
+				// Evaluación de la otra opción introducida por el usuario
 				} else if (option.equals("N")) {
 					System.out.println("De acuerdo, que pase buen día. Recuerda que dispone de " + d4.getFreeDays()
 							+ " días disfrutables");
 				}
-			}else {
-				
-				System.out.println("El nombre que ha introducido no existe en nuestra BD (imaginaria), reinicie el programa");
-				
+			} else {
+
+				System.out.println(
+						"El nombre que ha introducido no existe en nuestra BD (imaginaria), reinicie el programa");
+
 			}
 
+		// Última condición, si no se cumpliese las anteriores
 		} else {
 
 			System.out.println("Por motivos de la empresa el trabajo tiene que ser programador");
